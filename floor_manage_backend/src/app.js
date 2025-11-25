@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const sequelize = require('./config/database');
 const path = require('path');
 require('dotenv').config();
-
+//hiiiiii
 const authRoutes = require('./routes/authRoutes');
 const floorPlanRoutes = require('./routes/floorPlanRoutes');
 const meetingRoomRoutes = require('./routes/meetingRoomRoutes');
