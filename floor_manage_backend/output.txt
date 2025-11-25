@@ -1,0 +1,19 @@
+[dotenv@17.2.3] injecting env (7) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+F:\1\MoveInSync\floor_manage_backend\src\controllers\meetingRoomController.js:2
+const { Op } = Sequelize;
+        ^
+
+TypeError: Cannot destructure property 'Op' of 'Sequelize' as it is undefined.
+    at Object.<anonymous> (F:\1\MoveInSync\floor_manage_backend\src\controllers\meetingRoomController.js:2:9)
+    at Module._compile (node:internal/modules/cjs/loader:1254:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+    at Module.load (node:internal/modules/cjs/loader:1117:32)
+    at Module._load (node:internal/modules/cjs/loader:958:12)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at Object.<anonymous> (F:\1\MoveInSync\floor_manage_backend\src\routes\meetingRoomRoutes.js:3:31)
+    at Module._compile (node:internal/modules/cjs/loader:1254:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+
+Node.js v18.16.0
