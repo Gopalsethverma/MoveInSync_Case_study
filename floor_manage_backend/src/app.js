@@ -20,7 +20,7 @@ app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 app.use('/api/auth', authRoutes);
 app.use('/api/floor-plans', floorPlanRoutes);
 app.use('/api/meeting-rooms', meetingRoomRoutes);
-
+//jhjhjhjhjhjhjhjhjjhjhj
 // Test route
 app.get('/', (req, res) => {
     res.send('Floor Management API is running');

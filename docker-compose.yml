@@ -1,0 +1,47 @@
+
+
+services:
+  backend:
+    build: ./floor_manage_backend
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=rootpassword
+      - DB_NAME=floor_management
+      - PORT=3000
+      - JWT_SECRET=your_jwt_secret # Replace with a secure secret
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  frontend:
+    build: ./floor_manage_ui
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: floor_management
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db_data:
