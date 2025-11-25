@@ -3,7 +3,7 @@ import 'local_storage_service.dart';
 
 class ApiService {
   final Dio _dio = Dio(BaseOptions(
-    baseUrl: 'http://10.65.188.102:3000/api', 
+    baseUrl: 'http://51.20.42.9:3000/api', 
     connectTimeout: const Duration(seconds: 15),
     receiveTimeout: const Duration(seconds: 15),
   ));
